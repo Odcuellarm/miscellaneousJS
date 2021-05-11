@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Armstrong Number Checker</title>
+    </head>
+    <body>
+       <diV>
+           <h1>Armstrong Number</h1>
+           <p>Check if your number is an armstrong number.</p>
+           Enter your number: <input type="text" id="num"/>
+           <button onclick="checkArmstrong()">Armstrong?</button>
+       </diV>
+       <script>
+           function checkArmstrong(){
+                let total = 0;
+                let num = parseInt(document.getElementById('num').value);
+                let tempNum = num; 
+
+                while(tempNum > 0){
+                    let lasDigit = tempNum % 10;
+                    total += (Math.pow(lasDigit, 3))
+                    tempNum = parseInt(tempNum / 10); 
+                }
+                if(total === num){
+                    return document.write("The number is an armstrong number");
+                }else{
+                    return document.write("The number is not an armstrong number");
+                }}    
+       </script>
+    </body>
+</html>

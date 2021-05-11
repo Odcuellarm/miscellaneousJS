@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Table App</title>
+    </head>
+    <body>
+       <diV>
+           <h1>Table program</h1>
+           <p>This program takes a number an returns a table with it's first 10 multiples.</p>
+           Enter your number: <input type="text" id="tableOf"/>
+           <button onclick="getTable()">Get table </button>
+
+       </diV>
+
+       <script>
+           function getTable(){
+                let num = document.getElementById('tableOf').value;
+                for(let i=1; i <= 10; i++){
+                    document.write(num * i + " | ");
+                }
+           }    
+       </script>
+    </body>
+</html>

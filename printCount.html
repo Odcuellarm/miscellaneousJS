@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="utf-8" />
+        <title>Count from ... To ...</title>
+    </head>
+    <body>
+       <diV>
+           <h1>Count from ... To ...</h1>
+           <p>This program receives two values, and prints the number between those values</p>
+           First number: <input type="text" id="first_num"/>
+           Second number: <input type="text" id="second_num"/>
+           <button onclick="checkNums()">Let's count!</button>
+
+       </diV>
+       <script>
+          
+           function checkNums(){
+                let firstNum = document.getElementById('first_num').value;
+                let secondNum = document.getElementById('second_num').value;
+                countBetween(firstNum, secondNum);
+           }
+           function countBetween(lower, upper){
+            for(let i=parseInt(lower) + 1; i <= upper; i++){
+                    document.write(i + " | ");
+            }
+        }    
+       </script>
+    </body>
+</html>
